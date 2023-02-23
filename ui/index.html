@@ -53,21 +53,21 @@
 <script>
     var i = 0;
     document.addEventListener("keydown",function(sex2){
-            if (sex2.code === "ArrowRight"){
+            if (sex2.code === "KeyD"){
             if(i>=prvnihra.length - 1) i = -1;    
             i++;
             prvnihra[i].focus();
-            console.log("prava", i);
+            console.log("right", i);
             console.log("array je", prvnihra.length);
             }
             
         })
     document.addEventListener("keydown",function(sex3){
-        if(sex3.code === "ArrowUp"){
+        if(sex3.code === "KeyA"){
             if(i<=0) i=prvnihra.length
             i--;
             prvnihra[i].focus()
-            console.log("leva", i);
+            console.log("left", i);
         }
         if (sex3.code === "KeyE"){
             console.log(document.activeElement);

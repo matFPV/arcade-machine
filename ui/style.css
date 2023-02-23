@@ -11,7 +11,9 @@ body{
     min-height: 100vh;
     max-width: 90vw;
     margin: 0 auto;
-    background-color: rgb(56, 55, 55, 1);
+    /*background-color: rgb(56, 55, 55, 1);*/
+    background-image: url(BACKGROUND\ GOOD.png);
+    background-size: cover;
 }
 * {
     box-sizing: border-box; /* ulehci zivot */
@@ -30,13 +32,18 @@ body{
 }
 
 .sex{
+    
+    opacity: 0;
+    margin-bottom: 110px;
     z-index: 1;
-    opacity: 0.91;
+    transition: opacity 1s, margin-bottom 0.8s;
+
+    
 }
 
-.sex:focus{
-    border:10px solid red;
-}
+
+
+
 #sdvx3-button{
     position: relative;    
     border-radius: 15px;
@@ -93,4 +100,27 @@ body{
         height: 100%;
         z-index: 0;
         border-radius: 15px;
-    }  
+    } 
+    @keyframes blik {
+        0% {
+            box-shadow: 0 0 0 3px rgba(255, 254, 254,0);
+        }
+        50% {
+            box-shadow: 0 0 0 3px rgba(255, 254, 254,1); 
+        }
+        100% {
+            box-shadow: 0 0 0 3px rgba(255, 254, 254,0);
+        }
+    } 
+    .move:focus {
+        outline: none;
+        animation-iteration-count: infinite;
+        animation-name: blik;
+        animation-duration: 1.4s;
+      }
+      .move:focus h1{ 
+        transition: opacity 1s, margin-bottom 0.8s;
+        z-index: 1;
+        opacity: 1;
+        margin-bottom: 80px;
+    }
