@@ -1,126 +1,160 @@
-.container{
+.container {
     display: grid;
-    height: 85vw;
-   grid-template-columns: repeat(3,1fr);
-   grid-template-rows: repeat(2,1fr);
-   grid-gap: 15px;
-   margin-top: 10px;
-   
-}
-body{
-    min-height: 100vh;
-    max-width: 90vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin-top: 10px;
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
     margin: 0 auto;
     /*background-color: rgb(56, 55, 55, 1);*/
-    background-image: url(BACKGROUND\ GOOD.png);
-    background-size: cover;
+    
+
 }
+
+body {
+    
+   margin: 0;
+   overflow: hidden;
+
+}
+
 * {
-    box-sizing: border-box; /* ulehci zivot */
-  }
-.move{
+    box-sizing: border-box;
+    /* ulehci zivot */
+}
+
+.move {
     display: flex;
-    color:rgb(15, 12, 12, 0.88);
+    color: rgb(15, 12, 12, 0.88);
     border: 3px solid black;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
     border-radius: 15px;
-    
+
 
 }
 
-.sex{
-    
+.sex {
+
     opacity: 0;
-    margin-bottom: 110px;
+    bottom: 110px;
     z-index: 1;
-    transition: opacity 1s, margin-bottom 0.8s;
+    transition: opacity 1s, bottom 0.8s;
+    position: relative;
 
-    
+
 }
 
 
 
 
-#sdvx3-button{
-    position: relative;    
-    border-radius: 15px;
-    }
-    #sdvx3-button img {
-        content: "";
-        object-fit: cover;
-        opacity: 0.8;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        border-radius: 10px;
-    }
-#sdvx4-button{
+#sdvx3-button {
     position: relative;
     border-radius: 15px;
-    }
-    #sdvx4-button img{
-         content: "";
-          
-        object-fit: cover;
-        opacity: 0.8;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        border-radius: 15px;
-        
-    }  
-#sdvx5-button{
+}
+
+#sdvx3-button img {
+    content: "";
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#sdvx4-button {
     position: relative;
     border-radius: 15px;
+}
+
+#sdvx4-button img {
+    content: "";
+
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 15px;
+
+}
+
+#sdvx5-button {
+    position: relative;
+    border-radius: 15px;
+}
+
+#sdvx5-button img {
+    content: "";
+
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 15px;
+}
+
+@keyframes blik {
+    0% {
+        box-shadow: 0 0 0 3px rgba(255, 254, 254, 0);
     }
-    #sdvx5-button img{
-        content: "";
-           
-        object-fit: cover;
-        opacity: 0.8;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        border-radius: 15px;
-    } 
-    @keyframes blik {
-        0% {
-            box-shadow: 0 0 0 3px rgba(255, 254, 254,0);
-        }
-        50% {
-            box-shadow: 0 0 0 3px rgba(255, 254, 254,1); 
-        }
-        100% {
-            box-shadow: 0 0 0 3px rgba(255, 254, 254,0);
-        }
-    } 
-    .move:focus {
-        outline: none;
-        animation-iteration-count: infinite;
-        animation-name: blik;
-        animation-duration: 1.4s;
-      }
-      .move:focus h1{ 
-        transition: opacity 1s, margin-bottom 0.8s;
-        z-index: 1;
-        opacity: 1;
-        margin-bottom: 80px;
+
+    50% {
+        box-shadow: 0 0 0 3px rgba(255, 254, 254, 1);
     }
+
+    100% {
+        box-shadow: 0 0 0 3px rgba(255, 254, 254, 0);
+    }
+}
+
+.move:focus {
+    outline: none;
+    animation-iteration-count: infinite;
+    animation-name: blik;
+    animation-duration: 1.4s;
+}
+
+.move:focus h1 {
+    transition: opacity 1s, bottom 0.8s;
+    z-index: 1;
+    opacity: 1;
+    bottom: 80px;
+    position: relative;
+}
+
+.move:focus img {
+    transition: opacity 0.6s;
+    opacity: 0.7;
+}
+
+.move img {
+    opacity: 1;
+}
+
+.hlavnidiv {
+    aspect-ratio: 3/4;
+    background-image: url("JPGS/BACKGROUND GOOD.png");
+    background-size: cover;
+}

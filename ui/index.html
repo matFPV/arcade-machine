@@ -5,40 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>UI</title>
 </head>
 <body>
 <script src ="Vars.js">
 </script> <!--Loadne Vars.js-->
-<div class="container">
+<div class="hlavnidiv">
+    <div class="container">
         <button class="move" type="button" id="sdvx3-button" onclick="vers=3;sdvx()">
             <img src="JPGS/sound-voltex-iii-gravity-wars-1.png" alt="">
             <h1 class="sex">Sound Voltex III: Gravity Wars</h1>    
-    </button> <!--SDVX3--> 
-    <button class="move" type="button" id="sdvx4-button" onclick="vers=4;sdvx()">
+        </button> <!--SDVX3--> 
+        <button class="move" type="button" id="sdvx4-button" onclick="vers=4;sdvx()">
             <img src="JPGS/maxresdefault3.jpg" alt="">
-        <h1 class="sex">SDVX4</h1>  
-    </button> <!--SDVX4--> 
-    <button class="move" type="button" id="sdvx5-button" onclick="vers=5;sdvx()">
+            <h1 class="sex">SDVX4</h1>  
+        </button> <!--SDVX4--> 
+        <button class="move" type="button" id="sdvx5-button" onclick="vers=5;sdvx()">
             <img src="JPGS/SDVX5scaled.jpg" alt="">
-        <h1 class="sex">SDVX5</h1>  
-    </button>
-    <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
-        <img src="" alt="">
-        <h1 class="sex">SDVX6</h1>  
-    </button> <!--SDVX5--> 
-    <button class="move" type="button" id="sdvx7-button" onclick="vers=5;sdvx()">
-        <img src="" alt="">
-        <h1 class="sex">GAME1</h1>  
-    </button> <!--SDVX5--> 
-    <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
-        <img src="" alt="">
-        <h1 class="sex">GAME2</h1>  
-    </button> <!--SDVX5--> 
-   
+            <h1 class="sex">SDVX5</h1>  
+        </button>
+        <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
+            <img src="" alt="">
+            <h1 class="sex">SDVX6</h1>  
+        </button> <!--SDVX5--> 
+        <button class="move" type="button" id="sdvx7-button" onclick="vers=5;sdvx()">
+            <img src="" alt="">
+            <h1 class="sex">GAME1</h1>  
+        </button> <!--SDVX5--> 
+        <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
+            <img src="" alt="">
+            <h1 class="sex">GAME2</h1>  
+        </button> <!--SDVX5--> 
     
+        
+    </div>
 </div>
-
 
 
 
@@ -92,33 +93,33 @@
     const { execFile, exec } = require('child_process');
     function sdvx(){
         console.log("promenna",vers);
-    switch (vers) {
-        case 3:
+        switch (vers) {
+            case 3:
                 
-            execFile(AsphyxiaPath);   
-            execFile(SDVX3Path);
+                execFile(AsphyxiaPath);   
+                execFile(SDVX3Path);
                 setTimeout(function(){  
                 exec("taskkill /im " + browser)    
                 },1200)
-            //console.log(vers);
-            break;
-        case 4: 
-            execFile(AsphyxiaPath);   
-            execFile(SDVX4Path);
+                //console.log(vers);
+                break;
+            case 4: 
+                execFile(AsphyxiaPath);   
+                execFile(SDVX4Path);
                 setTimeout(function(){  
                 exec("taskkill /im " + browser)    
                 },1200)
-            break;
-        case 5:
-            execFile(AsphyxiaPath);   
-            execFile(SDVX5Path);
+                break;
+            case 5:
+                execFile(AsphyxiaPath);   
+                execFile(SDVX5Path);
                 setTimeout(function(){  
                 exec("taskkill /im " + browser)    
                 },1200)
-            break;
-        default:
-            break;
-    }
+                break;
+            default:
+                break;
+        }
 }
 </script>
 </body>
