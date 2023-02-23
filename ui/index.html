@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<script src ="Vars.js">
+</script> <!--Loadne Vars.js-->
+<div class="container">
+    <button class="move" type="button" id="sdvx3-button"  onclick="vers=3;sdvx()">
+        <h1 class="sex">SDVX3</h1>    
+    </button> <!--SDVX3--> 
+    <button class="move" type="button" id="sdvx4-button" onclick="vers=4;sdvx()">
+        <h1 class="sex">SDVX4</h1>  
+    </button> <!--SDVX4--> 
+    <button class="move" type="button" id="sdvx5-button" onclick="vers=5;sdvx()">
+        <h1 class="sex">SDVX5</h1>  
+    </button>
+    <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
+        <h1 class="sex">SDVX6</h1>  
+    </button> <!--SDVX5--> 
+</div>
+
+
+
+
+<script>
+    const prvnihra = [...document.querySelectorAll("button")]
+   // for (i = 0; i < prvnihra.length; i++) {
+    //console.log(prvnihra[i]);
+//} 
+    console.log(prvnihra[0])
+    prvnihra[0].focus();
+</script>
+<script>
+    var i = 0;
+    document.addEventListener("keydown",function(sex2){
+            if (sex2.code === "ArrowRight" && i<prvnihra.length - 1){
+            i++;
+            prvnihra[i].focus();
+            console.log("prava", i);
+            console.log("array je", prvnihra.length);
+            }
+            
+        })
+    document.addEventListener("keydown",function(sex3){
+        if(sex3.code === "ArrowUp" && i>=1){
+            i--;
+            prvnihra[i].focus()
+            console.log("leva", i);
+        }
+        if (sex3.code === "KeyE"){
+            console.log(document.activeElement);
+            document.activeElement.click();
+        }
+    })
+        
+</script>
+<script>
+    var vers = 0;
+    const { execFile } = require('child_process');
+    function sdvx(){
+    switch (vers) {
+        case 3:
+            execFile(AsphyxiaPath);   
+            execFile(SDVX3Path);
+            //console.log(vers);
+            break;
+        case 4: 
+            execFile(AsphyxiaPath);   
+            execFile(SDVX4Path);
+            break;
+        case 5:
+            execFile(AsphyxiaPath);   
+            execFile(SDVX5Path);
+            break;
+        default:
+            break;
+    }
+}
+</script>
+</body>
+</html>
