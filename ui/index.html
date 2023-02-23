@@ -12,17 +12,31 @@
 </script> <!--Loadne Vars.js-->
 <div class="container">
     <button class="move" type="button" id="sdvx3-button"  onclick="vers=3;sdvx()">
+        <img src="sound-voltex-iii-gravity-wars-1.png" alt="">
         <h1 class="sex">SDVX3</h1>    
     </button> <!--SDVX3--> 
     <button class="move" type="button" id="sdvx4-button" onclick="vers=4;sdvx()">
+        <img src="maxresdefault3.jpg" alt="">
         <h1 class="sex">SDVX4</h1>  
     </button> <!--SDVX4--> 
     <button class="move" type="button" id="sdvx5-button" onclick="vers=5;sdvx()">
+        <img src="SDVX5scaled.jpg" alt="">
         <h1 class="sex">SDVX5</h1>  
     </button>
     <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
+        <img src="" alt="">
         <h1 class="sex">SDVX6</h1>  
     </button> <!--SDVX5--> 
+    <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
+        <img src="" alt="">
+        <h1 class="sex">GAME1</h1>  
+    </button> <!--SDVX5--> 
+    <button class="move" type="button" id="sdvx6-button" onclick="vers=5;sdvx()">
+        <img src="" alt="">
+        <h1 class="sex">GAME2</h1>  
+    </button> <!--SDVX5--> 
+   
+    
 </div>
 
 
@@ -39,7 +53,8 @@
 <script>
     var i = 0;
     document.addEventListener("keydown",function(sex2){
-            if (sex2.code === "ArrowRight" && i<prvnihra.length - 1){
+            if (sex2.code === "ArrowRight"){
+            if(i>=prvnihra.length - 1) i = -1;    
             i++;
             prvnihra[i].focus();
             console.log("prava", i);
@@ -48,7 +63,8 @@
             
         })
     document.addEventListener("keydown",function(sex3){
-        if(sex3.code === "ArrowUp" && i>=1){
+        if(sex3.code === "ArrowUp"){
+            if(i<=0) i=prvnihra.length
             i--;
             prvnihra[i].focus()
             console.log("leva", i);
