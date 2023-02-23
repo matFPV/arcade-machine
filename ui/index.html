@@ -100,14 +100,14 @@
 </script>
 <script>
     var vers = 0;
-    const { execFile, exec } = require('child_process');
+    const { execFile, exec, spawn } = require('child_process');
     function sdvx(){
         console.log("promenna",vers);
         switch (vers) {
             case 3:
                 
                 execFile(AsphyxiaPath);   
-                execFile(SDVX3Path);
+                spawn(SDVX3Path); 
                 setTimeout(function(){  
                 exec("taskkill /im " + browser)    
                 },1200)
@@ -115,14 +115,14 @@
                 break;
             case 4: 
                 execFile(AsphyxiaPath);   
-                execFile(SDVX4Path);
+                spawn(SDVX4Path);
                 setTimeout(function(){  
                 exec("taskkill /im " + browser)    
                 },1200)
                 break;
             case 5:
                 execFile(AsphyxiaPath);   
-                execFile(SDVX5Path);
+                spawn(SDVX5Path);
                 setTimeout(function(){  
                 exec("taskkill /im " + browser)    
                 },1200)
