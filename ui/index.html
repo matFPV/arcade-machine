@@ -107,15 +107,15 @@
             case 3:
                 
                 execFile(AsphyxiaPath);   
-                spawn(SDVX3Path); 
+                execFile(SDVX3Path); 
                 setTimeout(function(){  
-                exec("taskkill /im " + browser)    
+                spawn("taskkill /im " + browser)    
                 },1200)
                 //console.log(vers);
                 break;
             case 4: 
                 execFile(AsphyxiaPath);   
-                spawn(SDVX4Path);
+                exec(SDVX4Path);
                 setTimeout(function(){  
                 exec("taskkill /im " + browser)    
                 },1200)
