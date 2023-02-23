@@ -1,4 +1,4 @@
-var AsphyxiaPath = "C:\\test\\cmd.exe"
+var AsphyxiaPath = "C:\\Users\\kryvas\\Downloads\\asphyxia-core-win-x64\\asphyxia.exe"
 var SDVX3Path = "C:\\test\\cmd2.exe"
 var SDVX4Path = ""
 var SDVX5Path = ""
