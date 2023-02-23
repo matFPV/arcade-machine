@@ -41,7 +41,12 @@
     </div>
 </div>
 
-
+<audio id="Switchfocus">
+    <source src="Audio/switchfocus.mp3" type="audio/mpeg">
+</audio>
+<audio id="Audiostart">
+    <source src="Audio/audiostart.mp3" type="audio/mpeg">
+</audio>
 
 <script>
     const prvnihra = [...document.querySelectorAll("button")]
@@ -55,36 +60,41 @@
     var i = 0;
     document.addEventListener("keydown",function(sex2){
             if (sex2.code === "KeyD"){
-            if(i>=prvnihra.length - 1) i = -1;    
+            if(i>=prvnihra.length - 1) i = -1;
+            document.getElementById("Switchfocus").play();    
             i++;
             prvnihra[i].focus();
             console.log("right", i);
             console.log("array je", prvnihra.length);
             }
-            
         })
     document.addEventListener("keydown",function(sex3){
         if(sex3.code === "KeyA"){
+            document.getElementById("Switchfocus").play(); 
             if(i<=0) i=prvnihra.length
             i--;
             prvnihra[i].focus()
             console.log("left", i);
+
         }
         if (sex3.code === "KeyE"){
+            document.getElementById("Audiostart").play();
             console.log(document.activeElement);
             document.activeElement.click();
         }
         if(sex3.code === "KeyS" && i+3 < prvnihra.length){
+            document.getElementById("Switchfocus").play(); 
             console.log(i);
             i = i+3; 
             prvnihra[i].focus();
         }
         if(sex3.code === "KeyW" && i-3 >= 0){
+            document.getElementById("Switchfocus").play(); 
             console.log(i);
             i = i-3;
             prvnihra[i].focus(); 
         }
-        document.body.requestFullscreen();
+        //document.body.requestFullscreen();
    })
         
 </script>
