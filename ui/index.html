@@ -73,7 +73,17 @@
             console.log(document.activeElement);
             document.activeElement.click();
         }
-    })
+        if(sex3.code === "KeyS" && i+3 < prvnihra.length){
+            console.log(i);
+            i = i+3; 
+            prvnihra[i].focus();
+        }
+        if(sex3.code === "KeyW" && i-3 >= 0){
+            console.log(i);
+            i = i-3;
+            prvnihra[i].focus(); 
+        }
+   })
         
 </script>
 <script>
