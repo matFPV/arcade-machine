@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron');
-
+const { globalShortcut } = require('electron');
 const createWindow = () => {
     // Create the browser window.
     mainWindow = new BrowserWindow({
@@ -18,4 +18,6 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
     createWindow();
+  const ret = globalShortcut.register(ExitKey1 + " + " + ExitKey2, () => { //makes globalshortcut from vars in vars.js
+    console.log('CommandOrControl+X is pressed')
 });    
