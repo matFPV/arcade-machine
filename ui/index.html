@@ -104,32 +104,32 @@
         
 </script>
 <script>
-    var vers = 0;
+        var vers = 0;                                                   /* Handles Running of apps */
     const { execFile, exec, spawn } = require('child_process');
-    function sdvx(){
-        console.log("promenna",vers);
+        function sdvx() {
+            console.log("promenna", vers);
         switch (vers) {
             case 3:
                 execFile(AsphyxiaPath);   
-                execFile(SDVX3Path); 
-                setTimeout(function(){  
-                spawn("taskkill /im " + browser)    
-                },1200)
+                    exec("start /b " + SDVX3Path);
+                    setTimeout(function () {
+                        exec("taskkill /im " + browser)
+                    }, 2000)
                 //console.log(vers);
                 break;
             case 4: 
                 execFile(AsphyxiaPath);   
-                exec(SDVX4Path);
-                setTimeout(function(){  
+                    exec("start /b " + SDVX4Path);
+                    setTimeout(function () {
                 exec("taskkill /im " + browser)    
-                },1200)
+                    }, 1200)
                 break;
             case 5:
                 execFile(AsphyxiaPath);   
-                spawn(SDVX5Path);
-                setTimeout(function(){  
+                    exec("start /b " + SDVX5Path);
+                    setTimeout(function () {
                 exec("taskkill /im " + browser)    
-                },1200)
+                    }, 1200)
                 break;
             case 6:
 
@@ -140,4 +140,5 @@
 }
 </script>
 </body>
+
 </html>
