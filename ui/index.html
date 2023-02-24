@@ -49,20 +49,23 @@
 </audio> -->
 
 <script>
+    
     const prvnihra = [...document.querySelectorAll("button")]
    // for (i = 0; i < prvnihra.length; i++) {
     //console.log(prvnihra[i]);
 //} 
     console.log(prvnihra[0])
-    prvnihra[0].focus();
+        prvnihra[0].focus();                                            /* Handles interaction with bindable buttons and focus*/
 </script>
+                                                               
 <script>
+                                                                /**/
     var i = 0;
     const switchfocus = new Audio("Audio/switchfocus.mp3");
-    const startaudio = new Audio ("Audio/audiostart.mp3")
-    document.addEventListener("keydown",function(sex2){
-            if (sex2.code === "KeyD"){
-            if(i>=prvnihra.length - 1) i = -1;
+        const startaudio = new Audio("Audio/audiostart.mp3")
+        document.addEventListener("keydown", function (KeypressD) {
+            if (KeypressD.code === KeyRight) {
+                if (i >= prvnihra.length - 1) i = -1;
             switchfocus.play();    
             i++;
             prvnihra[i].focus();
@@ -70,30 +73,30 @@
             console.log("array je", prvnihra.length);
             }
         })
-    document.addEventListener("keydown",function(sex3){
-        if(sex3.code === "KeyA"){
+        document.addEventListener("keydown", function (Keypress) {
+            if (Keypress.code === KeyLeft) {
             switchfocus.play(); 
-            if(i<=0) i=prvnihra.length
+                if (i <= 0) i = prvnihra.length
             i--;
             prvnihra[i].focus()
             console.log("left", i);
 
         }
-        if (sex3.code === "KeyE"){
+            if (Keypress.code === KeyStart) {
             startaudio.play();
             console.log(document.activeElement);
             document.activeElement.click();
         }
-        if(sex3.code === "KeyS" && i+3 < prvnihra.length){
+            if (Keypress.code === KeyDown && i + 3 < prvnihra.length) {
             switchfocus.play();
             console.log(i);
-            i = i+3; 
+                i = i + 3;
             prvnihra[i].focus();
         }
-        if(sex3.code === "KeyW" && i-3 >= 0){
+            if (Keypress.code === KeyUp && i - 3 >= 0) {
             switchfocus.play(); 
             console.log(i);
-            i = i-3;
+                i = i - 3;
             prvnihra[i].focus(); 
         }
         //document.body.requestFullscreen();
