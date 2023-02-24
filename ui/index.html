@@ -43,17 +43,17 @@
 
         </div>
     </div>
-    
+
     <script>
         const prvnihra = [...document.querySelectorAll("button")] //creates array from buttons for focus select
-        console.log(prvnihra[0])
+            console.log(prvnihra[0])
             prvnihra[0].focus();
     </script>
-                                                               
+
     <script>
         //SFX Audio Sources                                                        
-        var i = 0;                                                      
-        const switchfocus = new Audio("Audio/switchfocus.mp3");         
+        var i = 0;
+        const switchfocus = new Audio("Audio/switchfocus.mp3");
         const startaudio = new Audio("Audio/audiostart.mp3")
         /* Handles interaction with bindable buttons and focus*/
         document.addEventListener("keydown", function (KeypressD) {
@@ -94,53 +94,50 @@
             }
             //document.body.requestFullscreen();
         })
-        
-        let keysPressed = {};
-        document.addEventListener('keydown', (event) => {
-            keysPressed[event.key] = true;
 
-            if (keysPressed[ExitKey1] && event.key == ExitKey2) {
-                alert(event.key);
-            }
-        });
 
-        document.addEventListener('keyup', (event) => {
-            delete keysPressed[event.key];
-        });
     </script>
-    
-    
-    
-    
-    
+
+
+
+
+
     <script>
         var vers = 0;
         const { execFile, exec, spawn } = require('child_process');
         function sdvx() {
             console.log("promenna", vers);
+            const { ipcRenderer } = require('electron');
             /* Handles Running of apps */
             switch (vers) {
                 case 3:
+                    Execounter = 1;
                     execFile(AsphyxiaPath);
                     exec("start /b " + SDVX3Path); //executes cmd with start and path
                     setTimeout(function () {
                         exec("taskkill /im " + browser)//kills browser
                     }, 2000)
                     //console.log(vers);
+                    ipcRenderer.send("number", Execounter); //sends number to main which tells main what to kill on shortcut
                     break;
                 case 4:
+                    Execounter = 2;
                     execFile(AsphyxiaPath);
                     exec("start /b " + SDVX4Path);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 1200)
+                    ipcRenderer.send("number", Execounter);
                     break;
                 case 5:
+                    Execounter = 3;
+
                     execFile(AsphyxiaPath);
                     exec("start /b " + SDVX5Path);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 1200)
+                    ipcRenderer.send("number", Execounter);
                     break;
                 case 6:
 
