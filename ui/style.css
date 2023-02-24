@@ -9,14 +9,14 @@
     padding: 2rem;
     margin: 0 auto;
     /*background-color: rgb(56, 55, 55, 1);*/
-    
+
 
 }
 
 body {
-    
-   margin: 0;
-   overflow: hidden;
+
+    margin: 0;
+    overflow: hidden;
 
 }
 
@@ -27,9 +27,9 @@ body {
 
 .move {
     display: flex;
-    color: rgb(15, 12, 12, 0.88);
+
     border: 3px solid black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
@@ -45,6 +45,9 @@ body {
     z-index: 1;
     transition: opacity 1s, bottom 0.8s;
     position: relative;
+    /* color: rgb(15, 12, 12, 0.88); */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
 
 
 }
@@ -60,7 +63,6 @@ body {
 #sdvx3-button img {
     content: "";
     object-fit: cover;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -79,9 +81,7 @@ body {
 
 #sdvx4-button img {
     content: "";
-
     object-fit: cover;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -94,6 +94,27 @@ body {
 
 }
 
+#sdvx6-button img {
+    content: "";
+
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 15px;
+}
+
+#sdvx6-button {
+    position: relative;
+    border-radius: 15px;
+}
+
 #sdvx5-button {
     position: relative;
     border-radius: 15px;
@@ -101,9 +122,7 @@ body {
 
 #sdvx5-button img {
     content: "";
-
     object-fit: cover;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -139,14 +158,15 @@ body {
 .move:focus h1 {
     transition: opacity 1s, bottom 0.8s;
     z-index: 1;
-    opacity: 1;
+    opacity: 0.90;
+
     bottom: 80px;
     position: relative;
 }
 
 .move:focus img {
     transition: opacity 0.6s;
-    opacity: 0.7;
+    opacity: 0.68;
 }
 
 .move img {
