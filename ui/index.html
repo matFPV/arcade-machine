@@ -41,12 +41,12 @@
     </div>
 </div>
 
-<audio id="Switchfocus">
+<!-- <audio id="Switchfocus">
     <source src="Audio/switchfocus.mp3" type="audio/mpeg">
 </audio>
 <audio id="Audiostart">
     <source src="Audio/audiostart.mp3" type="audio/mpeg">
-</audio>
+</audio> -->
 
 <script>
     const prvnihra = [...document.querySelectorAll("button")]
@@ -58,10 +58,12 @@
 </script>
 <script>
     var i = 0;
+    const switchfocus = new Audio("Audio/switchfocus.mp3");
+    const startaudio = new Audio ("Audio/audiostart.mp3")
     document.addEventListener("keydown",function(sex2){
             if (sex2.code === "KeyD"){
             if(i>=prvnihra.length - 1) i = -1;
-            document.getElementById("Switchfocus").play();    
+            switchfocus.play();    
             i++;
             prvnihra[i].focus();
             console.log("right", i);
@@ -70,7 +72,7 @@
         })
     document.addEventListener("keydown",function(sex3){
         if(sex3.code === "KeyA"){
-            document.getElementById("Switchfocus").play(); 
+            switchfocus.play(); 
             if(i<=0) i=prvnihra.length
             i--;
             prvnihra[i].focus()
@@ -78,18 +80,18 @@
 
         }
         if (sex3.code === "KeyE"){
-            document.getElementById("Audiostart").play();
+            startaudio.play();
             console.log(document.activeElement);
             document.activeElement.click();
         }
         if(sex3.code === "KeyS" && i+3 < prvnihra.length){
-            document.getElementById("Switchfocus").play(); 
+            switchfocus.play();
             console.log(i);
             i = i+3; 
             prvnihra[i].focus();
         }
         if(sex3.code === "KeyW" && i-3 >= 0){
-            document.getElementById("Switchfocus").play(); 
+            switchfocus.play(); 
             console.log(i);
             i = i-3;
             prvnihra[i].focus(); 
@@ -105,7 +107,6 @@
         console.log("promenna",vers);
         switch (vers) {
             case 3:
-                
                 execFile(AsphyxiaPath);   
                 execFile(SDVX3Path); 
                 setTimeout(function(){  
@@ -127,6 +128,9 @@
                 exec("taskkill /im " + browser)    
                 },1200)
                 break;
+            case 6:
+
+
             default:
                 break;
         }
