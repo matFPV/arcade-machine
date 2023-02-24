@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,138 +8,149 @@
     <link rel="stylesheet" href="style.css">
     <title>UI</title>
 </head>
+
 <body>
-<script src ="Vars.js">
-</script> <!--Loadne Vars.js-->
-<div class="hlavnidiv">
-    <div class="container">
-        <button class="move" type="button" id="sdvx3-button" onclick="vers=3;sdvx()">
-            <img src="JPGS/sound-voltex-iii-gravity-wars-1.png" alt="">
-            <h1 class="sex">Sound Voltex III: Gravity Wars</h1>    
-        </button> <!--SDVX3--> 
-        <button class="move" type="button" id="sdvx4-button" onclick="vers=4;sdvx()">
-            <img src="JPGS/maxresdefault3.jpg" alt="">
-            <h1 class="sex">Sound Voltex IV: Heavenly Haven</h1>  
-        </button> <!--SDVX4--> 
-        <button class="move" type="button" id="sdvx5-button" onclick="vers=5;sdvx()">
-            <img src="JPGS/SDVX5scaled.jpg" alt="">
-            <h1 class="sex">Sound Voltex V: Vivid Wave</h1>  
-        </button>
-        <button class="move" type="button" id="sdvx6-button" onclick="vers=6;sdvx()">
-            <img src="JPGS/exceed gear.jpg" alt="">
-            <h1 class="sex">Sound Voltex VI: Exceed GEAR</h1>  
-        </button> <!--SDVX5--> 
-        <button class="move" type="button" id="sdvx7-button" onclick="vers=7;sdvx()">
-            <img src="" alt="">
-            <h1 class="sex">GAME1</h1>  
-        </button> <!--SDVX5--> 
-        <button class="move" type="button" id="sdvx6-button" onclick="vers=8;sdvx()">
-            <img src="" alt="">
-            <h1 class="sex">GAME2</h1>  
-        </button> <!--SDVX5--> 
-    
-        
+    <script src="Vars.js">
+    </script> <!--Loadne Vars.js-->
+    <div class="hlavnidiv">
+        <div class="container">
+            <button class="move" type="button" id="sdvx3-button" onclick="vers=3;sdvx()">
+                <img src="JPGS/sound-voltex-iii-gravity-wars-1.png" alt="">
+                <h1 class="sex">Sound Voltex III: Gravity Wars</h1>
+            </button> <!--SDVX3-->
+            <button class="move" type="button" id="sdvx4-button" onclick="vers=4;sdvx()">
+                <img src="JPGS/maxresdefault3.jpg" alt="">
+                <h1 class="sex">Sound Voltex IV: Heavenly Haven</h1>
+            </button> <!--SDVX4-->
+            <button class="move" type="button" id="sdvx5-button" onclick="vers=5;sdvx()">
+                <img src="JPGS/SDVX5scaled.jpg" alt="">
+                <h1 class="sex">Sound Voltex V: Vivid Wave</h1>
+            </button>
+            <button class="move" type="button" id="sdvx6-button" onclick="vers=6;sdvx()">
+                <img src="JPGS/exceed gear.jpg" alt="">
+                <h1 class="sex">Sound Voltex VI: Exceed GEAR</h1>
+            </button> <!--SDVX5-->
+            <button class="move" type="button" id="sdvx7-button" onclick="vers=7;sdvx()">
+                <img src="" alt="">
+                <h1 class="sex">GAME1</h1>
+            </button> <!--SDVX5-->
+            <button class="move" type="button" id="sdvx6-button" onclick="vers=8;sdvx()">
+                <img src="" alt="">
+                <h1 class="sex">GAME2</h1>
+            </button> <!--SDVX5-->
+
+
+        </div>
     </div>
-</div>
-
-<!-- <audio id="Switchfocus">
-    <source src="Audio/switchfocus.mp3" type="audio/mpeg">
-</audio>
-<audio id="Audiostart">
-    <source src="Audio/audiostart.mp3" type="audio/mpeg">
-</audio> -->
-
-<script>
     
-    const prvnihra = [...document.querySelectorAll("button")]
-   // for (i = 0; i < prvnihra.length; i++) {
-    //console.log(prvnihra[i]);
-//} 
-    console.log(prvnihra[0])
+    <script>
+    
+        const prvnihra = [...document.querySelectorAll("button")]
+        // for (i = 0; i < prvnihra.length; i++) {
+        //console.log(prvnihra[i]);
+        //} 
+        console.log(prvnihra[0])
         prvnihra[0].focus();                                            /* Handles interaction with bindable buttons and focus*/
-</script>
+    </script>
                                                                
-<script>
+    <script>
                                                                 /**/
-    var i = 0;
-    const switchfocus = new Audio("Audio/switchfocus.mp3");
+        var i = 0;                                                      
+        const switchfocus = new Audio("Audio/switchfocus.mp3");         
         const startaudio = new Audio("Audio/audiostart.mp3")
         document.addEventListener("keydown", function (KeypressD) {
             if (KeypressD.code === KeyRight) {
                 if (i >= prvnihra.length - 1) i = -1;
-            switchfocus.play();    
-            i++;
-            prvnihra[i].focus();
-            console.log("right", i);
-            console.log("array je", prvnihra.length);
+                switchfocus.play();
+                i++;
+                prvnihra[i].focus();
+                console.log("right", i);
+                console.log("array je", prvnihra.length);
             }
         })
         document.addEventListener("keydown", function (Keypress) {
             if (Keypress.code === KeyLeft) {
-            switchfocus.play(); 
+                switchfocus.play();
                 if (i <= 0) i = prvnihra.length
-            i--;
-            prvnihra[i].focus()
-            console.log("left", i);
+                i--;
+                prvnihra[i].focus()
+                console.log("left", i);
 
-        }
+            }
             if (Keypress.code === KeyStart) {
-            startaudio.play();
-            console.log(document.activeElement);
-            document.activeElement.click();
-        }
+                startaudio.play();
+                console.log(document.activeElement);
+                document.activeElement.click();
+            }
             if (Keypress.code === KeyDown && i + 3 < prvnihra.length) {
-            switchfocus.play();
-            console.log(i);
+                switchfocus.play();
+                console.log(i);
                 i = i + 3;
-            prvnihra[i].focus();
-        }
+                prvnihra[i].focus();
+            }
             if (Keypress.code === KeyUp && i - 3 >= 0) {
-            switchfocus.play(); 
-            console.log(i);
+                switchfocus.play();
+                console.log(i);
                 i = i - 3;
-            prvnihra[i].focus(); 
-        }
-        //document.body.requestFullscreen();
-   })
+                prvnihra[i].focus();
+            }
+            //document.body.requestFullscreen();
+        })
         
-</script>
-<script>
+        let keysPressed = {};
+        document.addEventListener('keydown', (event) => {
+            keysPressed[event.key] = true;
+
+            if (keysPressed[ExitKey1] && event.key == ExitKey2) {
+                alert(event.key);
+            }
+        });
+
+        document.addEventListener('keyup', (event) => {
+            delete keysPressed[event.key];
+        });
+    </script>
+    
+    
+    
+    
+    
+    <script>
         var vers = 0;                                                   /* Handles Running of apps */
-    const { execFile, exec, spawn } = require('child_process');
+        const { execFile, exec, spawn } = require('child_process');
         function sdvx() {
             console.log("promenna", vers);
-        switch (vers) {
-            case 3:
-                execFile(AsphyxiaPath);   
+            switch (vers) {
+                case 3:
+                    execFile(AsphyxiaPath);
                     exec("start /b " + SDVX3Path);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 2000)
-                //console.log(vers);
-                break;
-            case 4: 
-                execFile(AsphyxiaPath);   
+                    //console.log(vers);
+                    break;
+                case 4:
+                    execFile(AsphyxiaPath);
                     exec("start /b " + SDVX4Path);
                     setTimeout(function () {
-                exec("taskkill /im " + browser)    
+                        exec("taskkill /im " + browser)
                     }, 1200)
-                break;
-            case 5:
-                execFile(AsphyxiaPath);   
+                    break;
+                case 5:
+                    execFile(AsphyxiaPath);
                     exec("start /b " + SDVX5Path);
                     setTimeout(function () {
-                exec("taskkill /im " + browser)    
+                        exec("taskkill /im " + browser)
                     }, 1200)
-                break;
-            case 6:
+                    break;
+                case 6:
 
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
-}
-</script>
+    </script>
 </body>
 
 </html>
