@@ -14,7 +14,7 @@
  - Set variable GameExe to whatever your game exe is (number after "GameExe" determines on which grid pos it will be)
  - if you added more game slots add case in switch statement and new GameExe variable in main.js
 
-### How to Add More Games ?
+### How to Add More Games/Slots ?
 - Add a new variale in **Vars.js** and set it to game exe path
 - Add new switch switch case in
 ```javascript   
