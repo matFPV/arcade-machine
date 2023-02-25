@@ -16,7 +16,7 @@
 
 ### How to Add More Games/Slots ?
 - Add a new variale in **Vars.js** and set it to game exe path
-- Add new switch switch case in
+- Add new switch switch case in last portion of index.html
 ```javascript   
 witch (vers) {
                 case 1:
