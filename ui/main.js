@@ -28,7 +28,7 @@ const createWindow = () => {
 app.whenReady().then(() => {
   createWindow(); 
   
-  const { ExitKey1, ExitKey2 } = require("./Vars.js") //imports exitkeys from vars.js
+  const { ExitKey1, ExitKey2, GameExe1, GameExe2, SDVXExe } = require("./Vars.js") //imports exitkeys from vars.js
   const { execFile, exec, spawn } = require('child_process');
   console.log(ExitKey1 + " + " + ExitKey2);
   
@@ -38,16 +38,25 @@ app.whenReady().then(() => {
     switch(Execounter){
       case 1:
         console.warn("funguje" + Execounter);
-        exec("taskkill /im spice.exe")
+        exec("taskkill /im " + SDVXExe);
         break;
       case 2:
         console.warn("funguje" + Execounter);
-        exec("taskkill /im spice.exe")
+        exec("taskkill /im " + SDVXExe);
         break;
       case 3:
         console.warn("funguje" + Execounter);
-        exec("taskkill /im spice.exe")
+        exec("taskkill /im " + SDVXExe);
         break;
+      case 4:
+        console.warn("funguje" + Execounter);
+        exec("taskkill /im " + SDVXExe);
+      case 5:
+        console.warn("funguje" + Execounter);
+        exec("taskkill /im " + GameExe1);
+      case 6:
+        console.warn("funguje" + Execounter);
+        exec("taskkill /im " + GameExe2);
       default:
         break;
     }

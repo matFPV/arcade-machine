@@ -14,20 +14,20 @@
     </script> <!--Loadne Vars.js-->
     <div class="hlavnidiv">
         <div class="container">
-            <button class="move" type="button" id="sdvx3-button" onclick="vers=3;sdvx()"> <!-- on click sets var vers to number and then runs sdvx which is just switch for 
+            <button class="move" type="button" id="sdvx3-button" onclick="vers=1;sdvx()"> <!-- on click sets var vers to number and then runs sdvx which is just switch for 
                                                                                             game path select-->
                 <img src="JPGS/sound-voltex-iii-gravity-wars-1.png" alt="">
                 <h1 class="sex">Sound Voltex III: Gravity Wars</h1>
             </button> <!--SDVX3-->
-            <button class="move" type="button" id="sdvx4-button" onclick="vers=4;sdvx()">
+            <button class="move" type="button" id="sdvx4-button" onclick="vers=2;sdvx()">
                 <img src="JPGS/maxresdefault3.jpg" alt="">
                 <h1 class="sex">Sound Voltex IV: Heavenly Haven</h1>
             </button> <!--SDVX4-->
-            <button class="move" type="button" id="sdvx5-button" onclick="vers=5;sdvx()">
+            <button class="move" type="button" id="sdvx5-button" onclick="vers=3;sdvx()">
                 <img src="JPGS/SDVX5scaled.jpg" alt="">
                 <h1 class="sex">Sound Voltex V: Vivid Wave</h1>
             </button>
-            <button class="move" type="button" id="sdvx6-button" onclick="vers=6;sdvx()">
+            <button class="move" type="button" id="sdvx6-button" onclick="vers=4;sdvx()">
                 <img src="JPGS/exceed gear.jpg" alt="">
                 <h1 class="sex">Sound Voltex VI: Exceed GEAR</h1>
             </button> <!--SDVX5-->
@@ -110,38 +110,46 @@
             const { ipcRenderer } = require('electron');
             /* Handles Running of apps */
             switch (vers) {
-                case 3:
-                    Execounter = 1;
+                case 1:
                     execFile(AsphyxiaPath);
                     exec("start /b " + SDVX3Path); //executes cmd with start and path
                     setTimeout(function () {
                         exec("taskkill /im " + browser)//kills browser
-                    }, 2000)
+                    }, 1200)
                     //console.log(vers);
-                    ipcRenderer.send("number", Execounter); //sends number to main which tells main what to kill on shortcut
+                    ipcRenderer.send("number", vers); //sends number to main which tells main what to kill on shortcut
                     break;
-                case 4:
-                    Execounter = 2;
+                case 2:
                     execFile(AsphyxiaPath);
                     exec("start /b " + SDVX4Path);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 1200)
-                    ipcRenderer.send("number", Execounter);
+                    ipcRenderer.send("number", vers);
                     break;
-                case 5:
-                    Execounter = 3;
-
+                case 3:
                     execFile(AsphyxiaPath);
                     exec("start /b " + SDVX5Path);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 1200)
-                    ipcRenderer.send("number", Execounter);
+                    ipcRenderer.send("number", vers);
+                    break;
+                case 4:
+                execFile(AsphyxiaPath);
+                    exec("start /b " + SDVX6Path);
+                    setTimeout(function () {
+                        exec("taskkill /im " + browser)
+                    }, 1200)
+                    ipcRenderer.send("number", vers);
+                    break;
+                case 5:
+                    execFile(GamePath1);
+                    ipcRenderer.send("number", vers);
                     break;
                 case 6:
-
-
+                    execFile(GamePath2);
+                    ipcRenderer.send("number", vers);   
                 default:
                     break;
             }

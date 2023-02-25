@@ -13,6 +13,9 @@ var KeyRight = "KeyD"
 var KeyStart = "KeyE"
 var ExitKey1 = "G"       // Only add uppercase name of the key without "Key" part  example: "KeyA" becomes "A"
 var ExitKey2 = "H"       // Only add uppercase name of the key without "Key" part  example: "KeyA" becomes "A"
+var GameExe1 = ""
+var GameExe2 = ""
+var SDVXExe = "spice.exe"
     
 if(module) // kdyz to neimportujes pres require tak module bude undefined
-module.exports = { ExitKey1, ExitKey2 };
+module.exports = { ExitKey1, ExitKey2, GameExe1, GameExe2, SDVXExe };
