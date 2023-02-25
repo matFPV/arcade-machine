@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const { globalShortcut } = require('electron');
 const createWindow = () => {
   ipcMain.on("number",(event,data)=>{ //Reads number var from index
+    Execounter = 0;
     console.warn(data)
     Execounter = data;
     console.warn(Execounter)
@@ -32,31 +33,29 @@ app.whenReady().then(() => {
   const { execFile, exec, spawn } = require('child_process');
   console.log(ExitKey1 + " + " + ExitKey2);
   
+  
   const ret = globalShortcut.register(ExitKey1 + " + " + ExitKey2, () => { //makes globalshortcut from vars in vars.js
     console.log('CommandOrControl+X is pressed')
     //On shortcut kills game exe
     switch(Execounter){
       case 1:
-        console.warn("funguje" + Execounter);
         exec("taskkill /im " + GameExe1);
         break;
       case 2:
-        console.warn("funguje" + Execounter);
         exec("taskkill /im " + GameExe2);
         break;
       case 3:
-        console.warn("funguje" + Execounter);
         exec("taskkill /im " + GameExe3);
         break;
       case 4:
-        console.warn("funguje" + Execounter);
         exec("taskkill /im " + GameExe4);
+        break;
       case 5:
-        console.warn("funguje" + Execounter);
         exec("taskkill /im " + GameExe5);
+        break;
       case 6:
-        console.warn("funguje" + GameExe6);
-        exec("taskkill /im " + Game);
+        exec("taskkill /im " + GameExe6);
+        break;
       default:
         break;
     }
