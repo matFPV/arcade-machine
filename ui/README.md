@@ -1,5 +1,18 @@
 ## UI for launching games with Custom built controllers
-### How to use ?
+## What is it ?
+- Its a UI made to be controlled with 4 keys
+Has 6 configurable premade slots for games
+### How to Use with the 6 slots ?
+- Set Keys in key section of Vars.js
+- Set GamePath to whatever exe you want to run example: ``"C:\\Users\\kryvas\\Downloads\\asphyxia-core-win-x64\\asphyxia.exe"``
+(Number behind GamePath corresponds to grid number so 1 will be for the first square, 6 for the last)
+- Now youre all set
+
+ ## Closing the game with shortcut setup
+ - Configure ExitKey1 and ExitKey2 in Vars.js
+ - Set variable GameExe to whatever your game exe is (number after "GameExe" determines on which grid pos it will be)
+
+### How to Add More Games ?
 - Add a new variale in **Vars.js** and set it to game exe path
 - Add new switch switch case in
 ```javascript   
@@ -32,6 +45,4 @@ Like this:
 - Add ```<button class="move" type="button" id="sdvx3-button"  onclick="vers=3;sdvx()"> ```
  > set the id to whatever you want and vers to corresponding number in switch case
  
- ## Closing the game with shortcut setup
- - Configure ExitKey1 and ExitKey2 in Vars.js
- - Set variable GameExe to whatever your game exe is (number after "GameExe" determines on which grid pos it will be)
+
