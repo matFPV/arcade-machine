@@ -19,27 +19,27 @@
             <button class="move" type="button" id="sdvx3-button" onclick="vers=1;sdvx()"> <!-- on click sets var vers to number and then runs sdvx which is just switch for 
                                                                                             game path select-->
                 <img id="img1" src="" alt="">
-                <h1 class="sex">Sound Voltex III: Gravity Wars</h1>
+                <h1 class="sex" id="title1"></h1>
             </button> <!--SDVX3-->
             <button class="move" type="button" id="sdvx4-button" onclick="vers=2;sdvx()">
                 <img id="img2" src="" alt="">
-                <h1 class="sex">Sound Voltex IV: Heavenly Haven</h1>
+                <h1 class="sex" id="title2"></h1>
             </button> <!--SDVX4-->
             <button class="move" type="button" id="sdvx5-button" onclick="vers=3;sdvx()">
                 <img id="img3" src="" alt="">
-                <h1 class="sex">Sound Voltex V: Vivid Wave</h1>
+                <h1 class="sex" id="title3"></h1>
             </button>
             <button class="move" type="button" id="sdvx6-button" onclick="vers=4;sdvx()">
                 <img id="img4" src="" alt="">
-                <h1 class="sex">Sound Voltex VI: Exceed GEAR</h1>
+                <h1 class="sex" id="title4"></h1>
             </button> <!--SDVX5-->
             <button class="move" type="button" id="sdvx7-button" onclick="vers=7;sdvx()">
                 <img id="img5" src="" alt="">
-                <h1 class="sex">GAME1</h1>
+                <h1 class="sex" id="title5"></h1>
             </button> <!--SDVX5-->
             <button class="move" type="button" id="sdvx6-button" onclick="vers=8;sdvx()">
                 <img id="img6" src="" alt="">
-                <h1 class="sex">GAME2</h1>
+                <h1 class="sex" id="title6"></h1>
             </button> <!--SDVX5-->
 
 
@@ -52,6 +52,14 @@
         document.getElementById("img4").src = ImgPath4;
         document.getElementById("img5").src = ImgPath5;
         document.getElementById("img6").src = ImgPath6;
+
+        document.getElementById("title1").innerHTML = Title1;
+        document.getElementById("title2").innerHTML = Title2;
+        document.getElementById("title3").innerHTML = Title3;
+        document.getElementById("title4").innerHTML = Title4;
+        document.getElementById("title5").innerHTML = Title5;
+        document.getElementById("title6").innerHTML = Title6;
+
     </script>
 
     <script>

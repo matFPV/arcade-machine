@@ -34,7 +34,13 @@ var ImgPath4 = "JPGS/exceed gear.jpg"
 var ImgPath5 = ""
 var ImgPath6 = ""
 
+// Game Titles
+var Title1 = "Sound Voltex III: Gravity Wars"
+var Title2 = "Sound Voltex IV: Heavenly Haven"
+var Title3 = "Sound Voltex V: Vivid Wave"
+var Title4 = "Sound Voltex VI: Exceed GEAR"
+var Title5 = "GAME1"
+var Title6 = "GAME2"
 
-    
-if(module) // kdyz to neimportujes pres require tak module bude undefined
+if(module) 
 module.exports = { ExitKey1, ExitKey2, GameExe1, GameExe2, GameExe3, GameExe4, GameExe5, GameExe6 };
