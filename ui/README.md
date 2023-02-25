@@ -18,30 +18,58 @@
 - Add a new variale in **Vars.js** and set it to game exe path
 - Add new switch switch case in
 ```javascript   
-switch (vers) {
-        case 3:
-            execFile(AsphyxiaPath);   
-            execFile(SDVX3Path);
-            //console.log(vers);
-            break;
-        case 4: 
-            execFile(AsphyxiaPath);   
-            execFile(SDVX4Path);
-            break;
-        case 5:
-            execFile(AsphyxiaPath);   
-            execFile(SDVX5Path);
-            break;
-        case 6:
-            execFile(NewVar)
-        default:
-            break;
+witch (vers) {
+                case 1:
+                    execFile(AsphyxiaPath);
+                    exec("start /b " + GamePath1); //executes cmd with start and path
+                    setTimeout(function () {
+                        exec("taskkill /im " + browser)//kills browser
+                    }, 1200)
+                    //console.log(vers);
+                    ipcRenderer.send("number", vers); //sends number to main which tells main what to kill on shortcut
+                    break;
+                case 2:
+                    execFile(AsphyxiaPath);
+                    exec("start /b " + GamePath2);
+                    setTimeout(function () {
+                        exec("taskkill /im " + browser)
+                    }, 1200)
+                    ipcRenderer.send("number", vers);
+                    break;
+                case 3:
+                    execFile(AsphyxiaPath);
+                    exec("start /b " + GamePath3);
+                    setTimeout(function () {
+                        exec("taskkill /im " + browser)
+                    }, 1200)
+                    ipcRenderer.send("number", vers);
+                    break;
+                case 4:
+                    execFile(AsphyxiaPath);
+                    exec("start /b " + GamePath4);
+                    setTimeout(function () {
+                        exec("taskkill /im " + browser)
+                    }, 1200)
+                    ipcRenderer.send("number", vers);
+                    break;
+                case 5:
+                    execFile(GamePath5);
+                    ipcRenderer.send("number", vers);
+                    break;
+                case 6:
+                    execFile(GamePath6);
+                    ipcRenderer.send("number", vers);
+                default:
+                    break;
+            }
 ```
 With execFile(your variable)
+and add ``ipc.Renderer.send("number", vers);``
 Like this: 
 ```javascript
-        case 6:
+        case 7:
             execFile(NewVar)
+            ipc.Renderer.send("number", vers);
 ```
 
 - Add ```<button class="move" type="button" id="sdvx3-button"  onclick="vers=3;sdvx()"> ```
