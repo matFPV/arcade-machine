@@ -31,3 +31,7 @@ Like this:
 
 - Add ```<button class="move" type="button" id="sdvx3-button"  onclick="vers=3;sdvx()"> ```
  > set the id to whatever you want and vers to corresponding number in switch case
+ 
+ ##Closing the game with shortcut setup
+ - Configure ExitKey1 and ExitKey2 in Vars.js
+ - Set variable GameExe to whatever your game exe is (number after "GameExe" determines on which grid pos it will be)
