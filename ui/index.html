@@ -112,7 +112,7 @@
             switch (vers) {
                 case 1:
                     execFile(AsphyxiaPath);
-                    exec("start /b " + SDVX3Path); //executes cmd with start and path
+                    exec("start /b " + GamePath1); //executes cmd with start and path
                     setTimeout(function () {
                         exec("taskkill /im " + browser)//kills browser
                     }, 1200)
@@ -121,7 +121,7 @@
                     break;
                 case 2:
                     execFile(AsphyxiaPath);
-                    exec("start /b " + SDVX4Path);
+                    exec("start /b " + GamePath2);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 1200)
@@ -129,7 +129,7 @@
                     break;
                 case 3:
                     execFile(AsphyxiaPath);
-                    exec("start /b " + SDVX5Path);
+                    exec("start /b " + GamePath3);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 1200)
@@ -137,18 +137,18 @@
                     break;
                 case 4:
                 execFile(AsphyxiaPath);
-                    exec("start /b " + SDVX6Path);
+                    exec("start /b " + GamePath4);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
                     }, 1200)
                     ipcRenderer.send("number", vers);
                     break;
                 case 5:
-                    execFile(GamePath1);
+                    execFile(GamePath5);
                     ipcRenderer.send("number", vers);
                     break;
                 case 6:
-                    execFile(GamePath2);
+                    execFile(GamePath6);
                     ipcRenderer.send("number", vers);   
                 default:
                     break;

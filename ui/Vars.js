@@ -1,10 +1,22 @@
 
 //Paths
 var AsphyxiaPath = "C:\\Users\\kryvas\\Downloads\\asphyxia-core-win-x64\\asphyxia.exe"
-var SDVX3Path = "C:\\sdvx\\spice2.lnk"
-var SDVX4Path = ""
-var SDVX5Path = ""
+var GamePath1 = "C:\\sdvx\\spice2.lnk"
+var GamePath2 = ""
+var GamePath3 = ""
+var GamePath4 = ""
+var GamePath5 = ""
+var GamePath6 = ""
+
+//exes
 var browser = "brave.exe"
+var GameExe1 = "spice.exe"
+var GameExe2 = ""
+var GameExe3 = ""
+var GameExe4 = ""
+var GameExe5 = ""
+var GameExe6 = ""
+
 //Keys
 var KeyUp = "KeyW"
 var KeyDown = "KeyS"
@@ -13,9 +25,8 @@ var KeyRight = "KeyD"
 var KeyStart = "KeyE"
 var ExitKey1 = "G"       // Only add uppercase name of the key without "Key" part  example: "KeyA" becomes "A"
 var ExitKey2 = "H"       // Only add uppercase name of the key without "Key" part  example: "KeyA" becomes "A"
-var GameExe1 = ""
-var GameExe2 = ""
-var SDVXExe = "spice.exe"
+
+
     
 if(module) // kdyz to neimportujes pres require tak module bude undefined
-module.exports = { ExitKey1, ExitKey2, GameExe1, GameExe2, SDVXExe };
+module.exports = { ExitKey1, ExitKey2, GameExe1, GameExe2, GameExe3, GameExe4, GameExe5, GameExe6 };
