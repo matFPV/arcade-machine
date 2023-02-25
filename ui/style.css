@@ -99,12 +99,14 @@ body {
 }
 
 .move:focus img {
-    transition: opacity 0.6s;
+    transition: opacity 0.6s, filter 1s;
     opacity: 0.68;
+    filter: blur(2.2px); 
 }
 
 .move img {
     opacity: 1;
+    filter: blur(0);
 }
 
 .hlavnidiv {
