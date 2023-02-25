@@ -63,12 +63,12 @@ witch (vers) {
                     break;
             }
 ```
-With execFile(your variable)
-and add ``ipc.Renderer.send("number", vers);``
+With ``execFile(your variable)``
+and ``ipc.Renderer.send("number", vers);``
 Like this: 
 ```javascript
         case 7:
-            execFile(NewVar)
+            execFile(your variable)
             ipc.Renderer.send("number", vers);
 ```
 
