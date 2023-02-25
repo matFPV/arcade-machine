@@ -26,6 +26,14 @@ var KeyStart = "KeyE"
 var ExitKey1 = "G"       // Only add uppercase name of the key without "Key" part  example: "KeyA" becomes "A"
 var ExitKey2 = "H"       // Only add uppercase name of the key without "Key" part  example: "KeyA" becomes "A"
 
+//Game Icons
+var ImgPath1 = "JPGS/sound-voltex-iii-gravity-wars-1.png"
+var ImgPath2 = "JPGS/maxresdefault3.jpg"
+var ImgPath3 = "JPGS/SDVX5scaled.jpg"
+var ImgPath4 = "JPGS/exceed gear.jpg"
+var ImgPath5 = ""
+var ImgPath6 = ""
+
 
     
 if(module) // kdyz to neimportujes pres require tak module bude undefined
