@@ -12,42 +12,52 @@
 <body>
     <script src="Vars.js">
     </script> <!--Loadne Vars.js-->
+
+
     <div class="hlavnidiv">
         <div class="container">
             <button class="move" type="button" id="sdvx3-button" onclick="vers=1;sdvx()"> <!-- on click sets var vers to number and then runs sdvx which is just switch for 
                                                                                             game path select-->
-                <img src="JPGS/sound-voltex-iii-gravity-wars-1.png" alt="">
+                <img id="img1" src="" alt="">
                 <h1 class="sex">Sound Voltex III: Gravity Wars</h1>
             </button> <!--SDVX3-->
             <button class="move" type="button" id="sdvx4-button" onclick="vers=2;sdvx()">
-                <img src="JPGS/maxresdefault3.jpg" alt="">
+                <img id="img2" src="" alt="">
                 <h1 class="sex">Sound Voltex IV: Heavenly Haven</h1>
             </button> <!--SDVX4-->
             <button class="move" type="button" id="sdvx5-button" onclick="vers=3;sdvx()">
-                <img src="JPGS/SDVX5scaled.jpg" alt="">
+                <img id="img3" src="" alt="">
                 <h1 class="sex">Sound Voltex V: Vivid Wave</h1>
             </button>
             <button class="move" type="button" id="sdvx6-button" onclick="vers=4;sdvx()">
-                <img src="JPGS/exceed gear.jpg" alt="">
+                <img id="img4" src="" alt="">
                 <h1 class="sex">Sound Voltex VI: Exceed GEAR</h1>
             </button> <!--SDVX5-->
             <button class="move" type="button" id="sdvx7-button" onclick="vers=7;sdvx()">
-                <img src="" alt="">
+                <img id="img5" src="" alt="">
                 <h1 class="sex">GAME1</h1>
             </button> <!--SDVX5-->
             <button class="move" type="button" id="sdvx6-button" onclick="vers=8;sdvx()">
-                <img src="" alt="">
+                <img id="img6" src="" alt="">
                 <h1 class="sex">GAME2</h1>
             </button> <!--SDVX5-->
 
 
         </div>
     </div>
+    <script>
+        document.getElementById("img1").src = ImgPath1; //Sets Button Imgs
+        document.getElementById("img2").src = ImgPath2;
+        document.getElementById("img3").src = ImgPath3;
+        document.getElementById("img4").src = ImgPath4;
+        document.getElementById("img5").src = ImgPath5;
+        document.getElementById("img6").src = ImgPath6;
+    </script>
 
     <script>
         const prvnihra = [...document.querySelectorAll("button")] //creates array from buttons for focus select
-            console.log(prvnihra[0])
-            prvnihra[0].focus();
+        console.log(prvnihra[0])
+        prvnihra[0].focus();
     </script>
 
     <script>
@@ -136,7 +146,7 @@
                     ipcRenderer.send("number", vers);
                     break;
                 case 4:
-                execFile(AsphyxiaPath);
+                    execFile(AsphyxiaPath);
                     exec("start /b " + GamePath4);
                     setTimeout(function () {
                         exec("taskkill /im " + browser)
@@ -149,7 +159,7 @@
                     break;
                 case 6:
                     execFile(GamePath6);
-                    ipcRenderer.send("number", vers);   
+                    ipcRenderer.send("number", vers);
                 default:
                     break;
             }
