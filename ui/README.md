@@ -73,6 +73,7 @@ Like this:
 ```
 
 - Add ```<button class="move" type="button" id="sdvx3-button"  onclick="vers=3;sdvx()"> ```
+To index.html
  > set the id to whatever you want and vers to corresponding number in switch case
  
 
