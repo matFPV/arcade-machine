@@ -50,6 +50,9 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
     createWindow();
+    globalShortcut.register(vars.keys.exit.join(" + "), () => {
+        stop();
+    });
 });
 
 /** @type {null|{ id: number, process: ReturnType<spawn>, title: string }} */
