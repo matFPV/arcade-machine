@@ -2,26 +2,38 @@
   "name": "ui",
   "version": "1.0.0",
   "description": "UI pro arcade mach",
-  "main": "main.js",
+  "main": "main.cjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "dev": "NODE_ENV=development concurrently \"vite\" \"electron-forge start\"",
+    "package": "vite build && electron-forge package",
+    "make": "vite build && electron-forge make"
   },
   "author": "Kryvas",
   "license": "ISC",
+  "public": false,
+  "type": "module",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.5",
     "@electron-forge/maker-deb": "^6.0.5",
     "@electron-forge/maker-rpm": "^6.0.5",
     "@electron-forge/maker-squirrel": "^6.0.5",
     "@electron-forge/maker-zip": "^6.0.5",
+    "@sveltejs/adapter-node": "^1.2.1",
+    "@sveltejs/kit": "^1.9.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "concurrently": "^7.6.0",
     "electron": "^23.1.0",
-    "electron-packager": "^17.1.1"
+    "electron-packager": "^17.1.1",
+    "svelte": "^3.47.0",
+    "svelte-check": "^3.0.4",
+    "svelte-preprocess": "^5.0.1",
+    "vite": "^4.1.4",
+    "vite-plugin-commonjs-externals": "^0.1.1"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "jquery": "^3.6.3"
+    "jquery": "^3.6.3",
+    "prettier": "^2.8.4",
+    "prettier-plugin-svelte": "^2.9.0"
   }
 }

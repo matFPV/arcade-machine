@@ -1,0 +1,31 @@
+{
+    "games": [{
+        "title": "Sound Voltex III: Gravity Wars",
+        "exe": "spice.exe",
+        "path": "C:\\sdvx\\spice2.lnk",
+        "image": "images/sound-voltex-iii-gravity-wars-1.png",
+        "supporting": [{
+            "path": "C:\\Users\\kryvas\\Downloads\\asphyxia-core-win-x64\\asphyxia.exe",
+            "kill-browser": true
+        }]
+    }, {
+        "title": "Sound Voltex IV: Heavenly Haven",
+        "image": "images/maxresdefault3.jpg"
+    }, {
+        "title": "Sound Voltex V: Vivid Wave",
+        "image": "images/SDVX5scaled.jpg"
+    }, {
+        "title": "Sound Voltex VI: Exceed GEAR",
+        "image": "images/exceed gear.jpg"
+    }],
+    "browser": "brave.exe",
+
+    "keys": {
+        "up": "KeyW",
+        "down": "KeyS",
+        "left": "KeyA",
+        "right": "KeyD",
+        "start": "KeyE",
+        "exit": ["G", "H"]
+    }
+}
