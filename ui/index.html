@@ -1,178 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>UI</title>
-</head>
+  </head>
 
-<body>
-    <script src="Vars.js">
-    </script> <!--Loadne Vars.js-->
-
+  <body>
+    <script src="Vars.js"></script>
+    <!--Loadne Vars.js-->
 
     <div class="hlavnidiv">
-        <div class="container">
-            <button class="move" type="button" id="sdvx3-button" onclick="vers=1;sdvx()"> <!-- on click sets var vers to number and then runs sdvx which is just switch for 
+      <div class="container">
+        <button
+          class="move"
+          type="button"
+          id="sdvx3-button"
+          onclick="vers=1;sdvx()"
+        >
+          <!-- on click sets var vers to number and then runs sdvx which is just switch for 
                                                                                             game path select-->
-                <img id="img1" src="" alt="">
-                <h1 class="sex" id="title1"></h1>
-            </button> <!--SDVX3-->
-            <button class="move" type="button" id="sdvx4-button" onclick="vers=2;sdvx()">
-                <img id="img2" src="" alt="">
-                <h1 class="sex" id="title2"></h1>
-            </button> <!--SDVX4-->
-            <button class="move" type="button" id="sdvx5-button" onclick="vers=3;sdvx()">
-                <img id="img3" src="" alt="">
-                <h1 class="sex" id="title3"></h1>
-            </button>
-            <button class="move" type="button" id="sdvx6-button" onclick="vers=4;sdvx()">
-                <img id="img4" src="" alt="">
-                <h1 class="sex" id="title4"></h1>
-            </button> <!--SDVX5-->
-            <button class="move" type="button" id="sdvx7-button" onclick="vers=7;sdvx()">
-                <img id="img5" src="" alt="">
-                <h1 class="sex" id="title5"></h1>
-            </button> <!--SDVX5-->
-            <button class="move" type="button" id="sdvx6-button" onclick="vers=8;sdvx()">
-                <img id="img6" src="" alt="">
-                <h1 class="sex" id="title6"></h1>
-            </button> <!--SDVX5-->
-
-
-        </div>
+          <img id="img1" src="" alt="" />
+          <h1 class="sex" id="title1"></h1>
+        </button>
+        <!--SDVX3-->
+        <button
+          class="move"
+          type="button"
+          id="sdvx4-button"
+          onclick="vers=2;sdvx()"
+        >
+          <img id="img2" src="" alt="" />
+          <h1 class="sex" id="title2"></h1>
+        </button>
+        <!--SDVX4-->
+        <button
+          class="move"
+          type="button"
+          id="sdvx5-button"
+          onclick="vers=3;sdvx()"
+        >
+          <img id="img3" src="" alt="" />
+          <h1 class="sex" id="title3"></h1>
+        </button>
+        <button
+          class="move"
+          type="button"
+          id="sdvx6-button"
+          onclick="vers=4;sdvx()"
+        >
+          <img id="img4" src="" alt="" />
+          <h1 class="sex" id="title4"></h1>
+        </button>
+        <!--SDVX5-->
+        <button
+          class="move"
+          type="button"
+          id="sdvx7-button"
+          onclick="vers=7;sdvx()"
+        >
+          <img id="img5" src="" alt="" />
+          <h1 class="sex" id="title5"></h1>
+        </button>
+        <!--SDVX5-->
+        <button
+          class="move"
+          type="button"
+          id="sdvx6-button"
+          onclick="vers=8;sdvx()"
+        >
+          <img id="img6" src="" alt="" />
+          <h1 class="sex" id="title6"></h1>
+        </button>
+        <!--SDVX5-->
+      </div>
     </div>
     <script>
-        document.getElementById("img1").src = ImgPath1; //Sets Button Imgs
-        document.getElementById("img2").src = ImgPath2;
-        document.getElementById("img3").src = ImgPath3;
-        document.getElementById("img4").src = ImgPath4;
-        document.getElementById("img5").src = ImgPath5;
-        document.getElementById("img6").src = ImgPath6;
+      document.getElementById('img1').src = ImgPath1 //Sets Button Imgs
+      document.getElementById('img2').src = ImgPath2
+      document.getElementById('img3').src = ImgPath3
+      document.getElementById('img4').src = ImgPath4
+      document.getElementById('img5').src = ImgPath5
+      document.getElementById('img6').src = ImgPath6
 
-        document.getElementById("title1").innerHTML = Title1;
-        document.getElementById("title2").innerHTML = Title2;
-        document.getElementById("title3").innerHTML = Title3;
-        document.getElementById("title4").innerHTML = Title4;
-        document.getElementById("title5").innerHTML = Title5;
-        document.getElementById("title6").innerHTML = Title6;
-
+      document.getElementById('title1').innerHTML = Title1
+      document.getElementById('title2').innerHTML = Title2
+      document.getElementById('title3').innerHTML = Title3
+      document.getElementById('title4').innerHTML = Title4
+      document.getElementById('title5').innerHTML = Title5
+      document.getElementById('title6').innerHTML = Title6
     </script>
 
     <script>
-        const prvnihra = [...document.querySelectorAll("button")] //creates array from buttons for focus select
-        console.log(prvnihra[0])
-        prvnihra[0].focus();
+      const prvnihra = [...document.querySelectorAll('button')] //creates array from buttons for focus select
+      console.log(prvnihra[0])
+      prvnihra[0].focus()
     </script>
 
     <script>
-        //SFX Audio Sources                                                        
-        var i = 0;
-        const switchfocus = new Audio("Audio/switchfocus.mp3");
-        const startaudio = new Audio("Audio/audiostart4.mp3")
-        /* Handles interaction with bindable buttons and focus*/
-        document.addEventListener("keydown", function (KeypressD) {
-            if (KeypressD.code === KeyRight) {
-                if (i >= prvnihra.length - 1) i = -1;
-                switchfocus.play(); //plays audio
-                i++;
-                prvnihra[i].focus();
-                console.log("right", i);
-                console.log("array je", prvnihra.length);
-            }
-        })
-        document.addEventListener("keydown", function (Keypress) {
-            if (Keypress.code === KeyLeft) {
-                switchfocus.play();
-                if (i <= 0) i = prvnihra.length
-                i--;
-                prvnihra[i].focus()
-                console.log("left", i);
-
-            }
-            if (Keypress.code === KeyStart) {
-                startaudio.play();
-                console.log(document.activeElement);
-                document.activeElement.click();
-            }
-            if (Keypress.code === KeyDown && i + 3 < prvnihra.length) {
-                switchfocus.play();
-                console.log(i);
-                i = i + 3;
-                prvnihra[i].focus();
-            }
-            if (Keypress.code === KeyUp && i - 3 >= 0) {
-                switchfocus.play();
-                console.log(i);
-                i = i - 3;
-                prvnihra[i].focus();
-            }
-            //document.body.requestFullscreen();
-        })
-
-
-    </script>
-
-
-
-
-
-    <script>
-        var vers = 0;
-        const { execFile, exec, spawn } = require('child_process');
-        function sdvx() {
-            console.log("promenna", vers);
-            const { ipcRenderer } = require('electron');
-            /* Handles Running of apps */
-            switch (vers) {
-                case 1:
-                    execFile(AsphyxiaPath);
-                    exec("start /b " + GamePath1); //executes cmd with start and path
-                    setTimeout(function () {
-                        exec("taskkill /im " + browser)//kills browser
-                    }, 1200)
-                    //console.log(vers);
-                    ipcRenderer.send("number", vers); //sends number to main which tells main what to kill on shortcut
-                    break;
-                case 2:
-                    execFile(AsphyxiaPath);
-                    exec("start /b " + GamePath2);
-                    setTimeout(function () {
-                        exec("taskkill /im " + browser)
-                    }, 1200)
-                    ipcRenderer.send("number", vers);
-                    break;
-                case 3:
-                    execFile(AsphyxiaPath);
-                    exec("start /b " + GamePath3);
-                    setTimeout(function () {
-                        exec("taskkill /im " + browser)
-                    }, 1200)
-                    ipcRenderer.send("number", vers);
-                    break;
-                case 4:
-                    execFile(AsphyxiaPath);
-                    exec("start /b " + GamePath4);
-                    setTimeout(function () {
-                        exec("taskkill /im " + browser)
-                    }, 1200)
-                    ipcRenderer.send("number", vers);
-                    break;
-                case 5:
-                    execFile(GamePath5);
-                    ipcRenderer.send("number", vers);
-                    break;
-                case 6:
-                    execFile(GamePath6);
-                    ipcRenderer.send("number", vers);
-                default:
-                    break;
-            }
+      //SFX Audio Sources
+      var i = 0
+      const switchfocus = new Audio('Audio/switchfocus.mp3')
+      const startaudio = new Audio('Audio/audiostart4.mp3')
+      /* Handles interaction with bindable buttons and focus*/
+      document.addEventListener('keydown', function (KeypressD) {
+        if (KeypressD.code === KeyRight) {
+          if (i >= prvnihra.length - 1) i = -1
+          switchfocus.play() //plays audio
+          i++
+          prvnihra[i].focus()
+          console.log('right', i)
+          console.log('array je', prvnihra.length)
         }
+      })
+      document.addEventListener('keydown', function (Keypress) {
+        if (Keypress.code === KeyLeft) {
+          switchfocus.play()
+          if (i <= 0) i = prvnihra.length
+          i--
+          prvnihra[i].focus()
+          console.log('left', i)
+        }
+        if (Keypress.code === KeyStart) {
+          startaudio.play()
+          console.log(document.activeElement)
+          document.activeElement.click()
+        }
+        if (Keypress.code === KeyDown && i + 3 < prvnihra.length) {
+          switchfocus.play()
+          console.log(i)
+          i = i + 3
+          prvnihra[i].focus()
+        }
+        if (Keypress.code === KeyUp && i - 3 >= 0) {
+          switchfocus.play()
+          console.log(i)
+          i = i - 3
+          prvnihra[i].focus()
+        }
+        //document.body.requestFullscreen();
+      })
     </script>
-</body>
 
+    <script>
+      var vers = 0
+      const { execFile, exec, spawn } = require('child_process')
+      function sdvx() {
+        console.log('promenna', vers)
+        const { ipcRenderer } = require('electron')
+        /* Handles Running of apps */
+        switch (vers) {
+          case 1:
+            execFile(AsphyxiaPath)
+            exec('start /b ' + GamePath1) //executes cmd with start and path
+            setTimeout(function () {
+              exec('taskkill /im ' + browser) //kills browser
+            }, 1200)
+            //console.log(vers);
+            ipcRenderer.send('number', vers) //sends number to main which tells main what to kill on shortcut
+            break
+          case 2:
+            execFile(AsphyxiaPath)
+            exec('start /b ' + GamePath2)
+            setTimeout(function () {
+              exec('taskkill /im ' + browser)
+            }, 1200)
+            ipcRenderer.send('number', vers)
+            break
+          case 3:
+            execFile(AsphyxiaPath)
+            exec('start /b ' + GamePath3)
+            setTimeout(function () {
+              exec('taskkill /im ' + browser)
+            }, 1200)
+            ipcRenderer.send('number', vers)
+            break
+          case 4:
+            execFile(AsphyxiaPath)
+            exec('start /b ' + GamePath4)
+            setTimeout(function () {
+              exec('taskkill /im ' + browser)
+            }, 1200)
+            ipcRenderer.send('number', vers)
+            break
+          case 5:
+            execFile(GamePath5)
+            ipcRenderer.send('number', vers)
+            break
+          case 6:
+            execFile(GamePath6)
+            ipcRenderer.send('number', vers)
+          default:
+            break
+        }
+      }
+    </script>
+  </body>
 </html>

@@ -9,15 +9,11 @@
     padding: 2rem;
     margin: 0 auto;
     /*background-color: rgb(56, 55, 55, 1);*/
-
-
 }
 
 body {
-
     margin: 0;
     overflow: hidden;
-
 }
 
 * {
@@ -36,8 +32,6 @@ body {
     border-radius: 15px;
     position: relative;
     border-radius: 15px;
-
-
 }
 
 .move img {
@@ -55,7 +49,6 @@ body {
 }
 
 .sex {
-
     opacity: 0;
     bottom: 110px;
     z-index: 1;
@@ -64,8 +57,6 @@ body {
     /* color: rgb(15, 12, 12, 0.88); */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
-
-
 }
 
 @keyframes blik {
@@ -92,7 +83,7 @@ body {
 .move:focus h1 {
     transition: opacity 1s, bottom 0.8s;
     z-index: 1;
-    opacity: 0.90;
+    opacity: 0.9;
 
     bottom: 80px;
     position: relative;
@@ -101,7 +92,7 @@ body {
 .move:focus img {
     transition: opacity 0.6s, filter 1s;
     opacity: 0.68;
-    filter: blur(2.2px); 
+    filter: blur(2.2px);
 }
 
 .move img {
